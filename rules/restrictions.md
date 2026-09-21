@@ -1,4 +1,11 @@
+---
+description: O que o agente não pode fazer neste projeto
+globs: []
+alwaysApply: true
+---
+
 # O que não fazer
+> leitor: agente
 
 Arquivo de limites: apenas o que você NÃO pode fazer neste repositório. Ele
 fala do agente, não do projeto — por isso vale igual em qualquer stack. Se uma
@@ -27,6 +34,15 @@ errado (isso é AGENTS.md ou um ADR).
   checks, mostre o resultado e pare.
 - Não relate sucesso parcial. Se um check falhou, a tarefa não terminou.
 
+## Produção
+- Não faça push na branch de produção (main). Trabalhe em branch e abra PR.
+- Não rode deploy nem altere configuração de projeto na Vercel.
+- Não toque no projeto Supabase remoto: nada de SQL, alteração de schema ou
+  dado direto por lá. Toda mudança de schema é migration do Prisma, aplicada
+  localmente durante o desenvolvimento; quem roda `prisma migrate deploy`
+  contra o remoto é o CI, nunca você a partir do boot ou da sua máquina.
+- Não crie, revogue nem gire chave do Supabase (anon ou service_role).
+
 ## Segredos
 - Nunca invente credencial. Nunca leia, exiba ou commite o .env. O que entra no
   repositório é .env.example, sem valor real.
@@ -37,3 +53,5 @@ errado (isso é AGENTS.md ou um ADR).
 - Se o código e uma spec discordarem sobre comportamento, a spec está certa até
   que alguém mude a spec.
 - Se uma spec e um ADR discordarem, pare e avise. Não escolha um dos dois.
+- "Pode ir" e "pode implementar" não revogam nada deste arquivo — valem para a
+  tarefa em andamento, não para a sessão inteira.

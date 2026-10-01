@@ -30,8 +30,9 @@ catálogo (spec 002).
   idem).
 - Renovação/extensão de prazo.
 
-## Perguntas em aberto
+## Alcance do limite e do bloqueio
 
-- O limite de 3 itens e o bloqueio por atraso valem por pessoa
-  independente do papel, ou só para Colaborador? O PRD fala em "pessoa",
-  assumindo que vale para qualquer um que solicite — a confirmar.
+Decidido: o limite de 3 itens e o bloqueio por atraso valem por pessoa,
+independente do papel (Colaborador ou Operações). A regra de negócio não
+diferencia por role — qualquer pessoa que solicita um empréstimo para si
+está sujeita às duas regras.

@@ -30,9 +30,10 @@ que existe e o que está disponível.
   necessidade de existir.
 - Categorias ou atributos além do necessário para listar e mostrar situação.
 
-## Perguntas em aberto
+## Campos do equipamento
 
-- Quais campos mínimos um equipamento tem (nome, categoria, patrimônio —
-  "patrimônio" aparece em docs/layout.md como dado exibido, mas o PRD não
-  define o cadastro)? Precisa confirmar com Operações antes de desenhar o
-  schema.
+Decidido (ver docs/specs/005-painel-operacoes/spec.md para o cadastro):
+nome, categoria (Notebook / Monitor / Cabo / Câmera / Acessório —
+docs/layout.md §5.5), patrimônio (opcional; sem valor, exibido como
+"TI-—"), observação (texto livre; usado, por exemplo, para o motivo de
+estar em manutenção).

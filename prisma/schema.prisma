@@ -1,0 +1,170 @@
+// Modelagem EMPREST.AI — v1
+//
+// Fontes:
+// - docs/adr/001-stack.md §Dados e persistência, §Multi-tenancy
+// - docs/specs/001-login, 002-catalogo-equipamentos, 003-solicitar-emprestimo,
+//   004-devolver-item, 005-painel-operacoes
+//
+// Dono do schema: Prisma Migrate (ver rules/migration.md). RLS, policies e
+// triggers não são modelados aqui — entram como SQL bruto na mesma migration
+// quando o andar zero chegar a esse ponto (ver ADR-001 §Dados).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Multi-tenancy (ADR-001 §Multi-tenancy)
+// ---------------------------------------------------------------------------
+
+model Tenant {
+  id        String   @id @default(uuid())
+  slug      String   @unique
+  name      String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  memberships Membership[]
+  equipments  Equipment[]
+  loans       Loan[]
+
+  @@map("tenants")
+}
+
+/// Vínculo pessoa-tenant com papel. O papel decide o que a pessoa vê e pode
+/// fazer (spec 001-login, spec 005-painel-operacoes); não é um campo em User
+/// porque a mesma pessoa pode ter papéis diferentes em tenants diferentes
+/// (ADR-001).
+model Membership {
+  id       String @id @default(uuid())
+  userId   String @map("user_id")
+  tenantId String @map("tenant_id")
+  role     Role
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@unique([userId, tenantId])
+  @@index([tenantId])
+  @@map("memberships")
+}
+
+enum Role {
+  COLABORADOR
+  OPERACOES
+}
+
+// ---------------------------------------------------------------------------
+// Usuário
+// ---------------------------------------------------------------------------
+
+/// Espelho mínimo da pessoa autenticada via Supabase Auth (ADR-001
+/// §Autenticação e autorização). O `id` é o mesmo UUID do usuário no
+/// Supabase Auth (auth.users) — não há cadastro de senha aqui, isso é
+/// responsabilidade do Supabase. Esta tabela existe para ter FK estável de
+/// domínio (empréstimos, memberships) e os poucos dados de perfil que as
+/// telas precisam exibir (nome, iniciais do avatar — layout.md §6).
+model User {
+  id    String @id
+  email String @unique
+  name  String
+
+  memberships Membership[]
+  loans       Loan[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("users")
+}
+
+// ---------------------------------------------------------------------------
+// Equipamento (spec 002-catalogo-equipamentos, spec 005-painel-operacoes §cadastro)
+// ---------------------------------------------------------------------------
+
+model Equipment {
+  id       String            @id @default(uuid())
+  tenantId String            @map("tenant_id")
+  name     String
+  category EquipmentCategory
+  /// Opcional; ausência é exibida como "TI-—" pelo frontend (layout.md §5.5),
+  /// não é preenchido com esse valor aqui.
+  assetTag String?           @map("asset_tag")
+  /// Texto livre; usado, por exemplo, para o motivo de estar em manutenção.
+  notes    String?
+  status   EquipmentStatus   @default(DISPONIVEL)
+
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  loans  Loan[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([tenantId, status])
+  @@map("equipments")
+}
+
+enum EquipmentCategory {
+  NOTEBOOK
+  MONITOR
+  CABO
+  CAMERA
+  ACESSORIO
+}
+
+/// Situação única por equipamento a qualquer momento (spec 002). Mantida
+/// como campo desnormalizado no Equipment (em vez de derivada só do Loan
+/// aberto) porque EM_MANUTENCAO não tem Loan associado — é um estado do
+/// próprio equipamento, não do empréstimo.
+enum EquipmentStatus {
+  DISPONIVEL
+  EMPRESTADO
+  EM_MANUTENCAO
+}
+
+// ---------------------------------------------------------------------------
+// Empréstimo (spec 003-solicitar-emprestimo, spec 004-devolver-item)
+// ---------------------------------------------------------------------------
+
+model Loan {
+  id          String     @id @default(uuid())
+  tenantId    String     @map("tenant_id")
+  userId      String     @map("user_id")
+  equipmentId String     @map("equipment_id")
+  status      LoanStatus @default(ABERTO)
+
+  /// Data do empréstimo. `dueAt` = borrowedAt + 14 dias (spec 003), calculado
+  /// na criação e armazenado — não recalculado em leitura, para a data
+  /// limite não mudar se a regra de prazo padrão mudar no futuro.
+  borrowedAt DateTime  @default(now()) @map("borrowed_at")
+  dueAt      DateTime  @map("due_at")
+  returnedAt DateTime? @map("returned_at")
+
+  tenant    Tenant    @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Restrict)
+  equipment Equipment @relation(fields: [equipmentId], references: [id], onDelete: Restrict)
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  /// Um equipamento só pode ter um empréstimo ABERTO por vez — reforça a
+  /// regra "equipamento emprestado some do disponível" (spec 002/003) no
+  /// nível de dado, não só na checagem de aplicação. Constraint parcial
+  /// (só sobre linhas com status = ABERTO) entra como SQL bruto na
+  /// migration, já que o Prisma não modela índice único parcial
+  /// nativamente nesta versão (ver rules/migration.md).
+  @@index([tenantId, userId, status])
+  @@index([tenantId, status, dueAt])
+  @@index([equipmentId, status])
+  @@map("loans")
+}
+
+enum LoanStatus {
+  ABERTO
+  DEVOLVIDO
+}

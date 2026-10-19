@@ -2,7 +2,9 @@
 
 Esqueleto do projeto: exceção à regra de spec (ver `rules/spec-flow.md`).
 Objetivo: provar que a stack do ADR-001 sobe junta numa máquina limpa.
-Status: AZ-01 concluída; AZ-02 aguardando liberação.
+Status: AZ-01, AZ-02 e AZ-04 concluídas; AZ-03 (migration) pendente.
+AZ-04 foi antecipada a pedido do time — o /health só precisa de `SELECT 1`,
+não depende de tabela.
 
 Branch: `feat/andar-zero`, a partir de `chore/estrutura-aula10`.
 Cada tarefa termina com os checks de `rules/checks.md` e para.
@@ -31,7 +33,7 @@ Cada tarefa termina com os checks de `rules/checks.md` e para.
   não aceita 7), Prisma 6 (o `latest` é RC; o 7 exige mudar o datasource).
 - **Check:** `npm run build` passa; `npm run start:dev` responde na `PORT`.
 
-### AZ-02 · conexão por variável de ambiente, erro claro sem banco
+### AZ-02 · conexão por variável de ambiente, erro claro sem banco ✅
 - `src/prisma/prisma.service.ts` (único lugar que instancia o client).
 - Validação do env com Zod no boot: falta `DATABASE_URL` → erro nomeando a
   variável, não stack trace genérico.
@@ -44,7 +46,7 @@ Cada tarefa termina com os checks de `rules/checks.md` e para.
 - Rodar `prisma/seed.ts` duas vezes (idempotência).
 - **Check:** `prisma migrate reset` sobe do zero sem passo manual.
 
-### AZ-04 · `GET /health` com status do banco
+### AZ-04 · `GET /health` com status do banco ✅
 - Controller → service; `SELECT 1` via `PrismaService`.
 - 200 com `{ status: "ok", db: "up" }`; 503 com `db: "down"`.
 - Teste com supertest sobre a app Nest.

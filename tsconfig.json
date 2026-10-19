@@ -15,5 +15,5 @@
     "forceConsistentCasingInFileNames": true,
     "types": ["node", "jest"]
   },
-  "include": ["src/**/*", "prisma/**/*"]
+  "include": ["src/**/*", "api/**/*", "prisma/**/*"]
 }

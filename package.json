@@ -6,7 +6,9 @@
   "scripts": {
     "db:up": "docker compose up -d --wait",
     "db:down": "docker compose down",
+    "postinstall": "prisma generate",
     "build": "nest build",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
     "start": "node dist/main",
     "start:dev": "nest start --watch",
     "test": "jest"

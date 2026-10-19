@@ -11,4 +11,11 @@ describe('validateEnv (AZ-02)', () => {
       NODE_ENV: 'development',
     });
   });
+
+  it('remove a barra final de FRONTEND_ORIGIN para o CORS casar', () => {
+    expect(
+      validateEnv({ DATABASE_URL: 'postgresql://x', FRONTEND_ORIGIN: 'https://front.vercel.app/' })
+        .FRONTEND_ORIGIN,
+    ).toBe('https://front.vercel.app');
+  });
 });

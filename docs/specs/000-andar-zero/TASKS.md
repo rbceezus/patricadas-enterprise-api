@@ -2,7 +2,7 @@
 
 Esqueleto do projeto: exceção à regra de spec (ver `rules/spec-flow.md`).
 Objetivo: provar que a stack do ADR-001 sobe junta numa máquina limpa.
-Status: AZ-01, AZ-02 e AZ-04 concluídas; AZ-03 (migration) pendente.
+Status: AZ-01, AZ-02, AZ-04 e entrada da Vercel concluídas; AZ-03 (migration) pendente.
 AZ-04 foi antecipada a pedido do time — o /health só precisa de `SELECT 1`,
 não depende de tabela.
 
@@ -52,7 +52,17 @@ Cada tarefa termina com os checks de `rules/checks.md` e para.
 - Teste com supertest sobre a app Nest.
 - **Check:** `npm test` verde; `curl localhost:3000/health` → 200.
 
+### Entrada da Vercel ✅ (antecipada a pedido do time)
+- `src/serverless.ts`: app Nest criada uma vez e cacheada fora do handler.
+- `api/index.ts` + `vercel.json`: toda rota reescrita para a function.
+- `src/app.setup.ts`: prefixo `/v1` e CORS (ADR-001) iguais local e Vercel.
+- **Divergência com o ADR-001 — decisão do time:** o ADR cita
+  `@vendia/serverless-express`, que adapta eventos do AWS Lambda. Na Vercel a
+  function já recebe `req`/`res` do Node, então o adapter não se aplica; a
+  instância cacheada (o objetivo do ADR) foi mantida sem ele. O ADR precisa
+  ser corrigido por quem decide.
+
 ## Fora deste plano
-Adapter serverless da Vercel, OpenAPI/`openapi.json`, auth por JWKS,
+OpenAPI/`openapi.json`, auth por JWKS,
 Testcontainers e CI ficam para as tarefas seguintes do andar zero
 (AZ-05..AZ-08), com plano próprio.

@@ -34,8 +34,20 @@ Se algo não estiver em lugar nenhum, pergunte — não decida.
 - O frontend gera o cliente HTTP com Orval a partir desse OpenAPI. Mudança de
   contrato exige coordenação entre os dois repositórios.
 
+## Comandos
+- `npm run db:up` / `npm run db:down` — Postgres 16 local (docker-compose.yml).
+- `npm run start:dev` — API em http://localhost:3000 com reload.
+- `npm run build` — compila para `dist/`.
+- `npm test` — Jest + supertest; exige o banco local no ar.
+- `npm run typecheck` — tsc sem emitir, inclui `api/` (entrada da Vercel).
+
+## Mapa de diretórios
+- `src/main.ts` — servidor local. `src/serverless.ts` + `api/index.ts` — Vercel.
+- `src/app.setup.ts` — prefixo `/v1` e CORS, compartilhado pelos dois.
+- `src/config/env.ts` — validação do env com Zod; variável nova entra aqui.
+- `src/prisma/` — único lugar que instancia o PrismaClient.
+- `src/health/` — `GET /health` (fora do prefixo `/v1`).
+- `prisma/` — schema e seed. Ainda sem `migrations/` (AZ-03 pendente).
+
 ## Estado atual do projeto
-O projeto ainda não tem código. Não existe comando de build, de teste nem de
-execução. Esta seção será substituída por Comandos, Mapa de diretórios,
-Convenções e Como testar quando o andar zero existir
-(ver docs/aulas/aula8-greenfield-ordem.html).
+Andar zero em andamento — ver docs/specs/000-andar-zero/TASKS.md.

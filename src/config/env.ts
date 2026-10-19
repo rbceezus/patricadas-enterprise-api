@@ -6,6 +6,12 @@ const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
   PORT: z.coerce.number().int().positive().default(3000),
   DATABASE_URL: z.string().min(1, 'DATABASE_URL não definida — copie .env.example para .env'),
+  // O navegador manda a origem sem barra final; "https://x.app/" nunca casaria.
+  FRONTEND_ORIGIN: z
+    .string()
+    .url()
+    .default('http://localhost:5173')
+    .transform((origin) => origin.replace(/\/+$/, '')),
 });
 
 export type Env = z.infer<typeof envSchema>;

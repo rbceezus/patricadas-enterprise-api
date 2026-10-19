@@ -2,6 +2,7 @@ import { INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 import request from 'supertest';
 import { AppModule } from '../app.module';
+import { configureApp } from '../app.setup';
 import { PrismaService } from '../prisma/prisma.service';
 
 // Roda contra o Postgres local (npm run db:up) usando o DATABASE_URL do .env.
@@ -12,6 +13,7 @@ describe('GET /health (AZ-04)', () => {
   beforeAll(async () => {
     const moduleRef = await Test.createTestingModule({ imports: [AppModule] }).compile();
     app = moduleRef.createNestApplication();
+    configureApp(app);
     await app.init();
     prisma = moduleRef.get(PrismaService);
   });
@@ -29,6 +31,10 @@ describe('GET /health (AZ-04)', () => {
       .get('/health')
       .expect(200)
       .expect({ status: 'ok', db: 'up' });
+  });
+
+  it('fica fora do prefixo /v1', async () => {
+    await request(app.getHttpServer()).get('/v1/health').expect(404);
   });
 
   it('devolve 503 e db down quando o banco não responde', async () => {

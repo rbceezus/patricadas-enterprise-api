@@ -2,7 +2,7 @@
 
 Esqueleto do projeto: exceção à regra de spec (ver `rules/spec-flow.md`).
 Objetivo: provar que a stack do ADR-001 sobe junta numa máquina limpa.
-Status: **plano aguardando aprovação** — nenhum código escrito ainda.
+Status: AZ-01 concluída; AZ-02 aguardando liberação.
 
 Branch: `feat/andar-zero`, a partir de `chore/estrutura-aula10`.
 Cada tarefa termina com os checks de `rules/checks.md` e para.
@@ -15,11 +15,11 @@ Cada tarefa termina com os checks de `rules/checks.md` e para.
    pelo time (Postgres local via Docker Compose).** Docker Compose ainda não
    está no ADR-001 — registrar lá é decisão do time.
 2. **Gerenciador de pacotes.** ADR-001 não fixa. Proposta: npm (já
-   instalado, gera `package-lock.json`).
+   instalado, gera `package-lock.json`). **Decidido: npm.**
 
 ## Tarefas
 
-### AZ-01 · um comando sobe Postgres local e a aplicação
+### AZ-01 · um comando sobe Postgres local e a aplicação ✅
 - `docker-compose.yml` com Postgres 16 (porta 5432, volume nomeado).
 - `package.json` com os pacotes do ADR-001: `@nestjs/core`, `@nestjs/common`,
   `@nestjs/platform-express`, `@nestjs/config`, `nestjs-zod`, `zod`,
@@ -27,6 +27,8 @@ Cada tarefa termina com os checks de `rules/checks.md` e para.
 - Arquivos criados à mão (sem `nest new`): `tsconfig.json`,
   `tsconfig.build.json`, `nest-cli.json`, `src/main.ts`, `src/app.module.ts`.
 - Scripts: `start:dev`, `build`, `test`, `db:up`.
+- Versões: Nest 11 (`nestjs-zod` não aceita 12), TypeScript 5 (`ts-jest`
+  não aceita 7), Prisma 6 (o `latest` é RC; o 7 exige mudar o datasource).
 - **Check:** `npm run build` passa; `npm run start:dev` responde na `PORT`.
 
 ### AZ-02 · conexão por variável de ambiente, erro claro sem banco

@@ -1,0 +1,22 @@
+# Postgres local, só para desenvolvimento (andar zero, AZ-01).
+# Credenciais abaixo são de dev local, não são segredo — nunca use em produção.
+services:
+  db:
+    image: postgres:16
+    container_name: emprestai-db
+    environment:
+      POSTGRES_USER: emprestai
+      POSTGRES_PASSWORD: emprestai
+      POSTGRES_DB: emprestai
+    ports:
+      - "5432:5432"
+    volumes:
+      - emprestai-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U emprestai -d emprestai"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+volumes:
+  emprestai-db-data:

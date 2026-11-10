@@ -100,12 +100,21 @@ model Equipment {
   notes    String?
   status   EquipmentStatus   @default(DISPONIVEL)
 
+  /// Imagem no bucket público `equipamentos` (spec 006 CA-03). Gerada pela
+  /// skill imagens-equipamentos; crédito vem de prisma/data/imagens.json.
+  imageUrl       String? @map("image_url")
+  imageAuthor    String? @map("image_author")
+  imageSourceUrl String? @map("image_source_url")
+  imageLicense   String? @map("image_license")
+
   tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
   loans  Loan[]
 
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
+  /// Patrimônio único dentro do tenant (spec 006 CA-01). NULL pode repetir.
+  @@unique([tenantId, assetTag])
   @@index([tenantId, status])
   @@map("equipments")
 }

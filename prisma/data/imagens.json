@@ -3,21 +3,88 @@
     "patrimonio": "TI-0001",
     "nome": "Notebook 14 polegadas",
     "busca": "laptop on white desk",
-    "buscaUsada": null,
-    "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "buscaUsada": "laptop isolated on white",
+    "motivoTrocaBusca": "o termo original não trouxe foto sem tela com conteúdo, marca ou pessoa em 2 rodadas (12 reprovadas)",
+    "tipoImagem": "photo",
+    "pixabayId": 5017973,
+    "pageURL": "https://pixabay.com/photos/keyboard-computer-technology-light-5017973/",
+    "autor": "JoshuaWoroniecki",
+    "autorId": 12734309,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 7188564,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1483974,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 2325627,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 5517762,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 1478822,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2980690,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1337986,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 4795762,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 6966045,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 1869820,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 7217599,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 1846056,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 886462,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 6869168,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 785742,
+        "motivo": "texto"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0001.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "b236cbeb083362845930dd147d567efe99c2335d38fccd202c26b1e1ea5c1f52"
+    }
   },
   {
     "patrimonio": "TI-0002",
@@ -25,119 +92,725 @@
     "busca": "open laptop minimal desk",
     "buscaUsada": null,
     "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "tipoImagem": "photo",
+    "pixabayId": 791032,
+    "pageURL": "https://pixabay.com/photos/technology-laptop-computer-netbook-791032/",
+    "autor": "kaboompics",
+    "autorId": 1013994,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 2511065,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2588514,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1250412,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1250411,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1428424,
+        "motivo": "nao-e-o-item"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0002.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "b9b28a16333299abfd5480ad42869855fead68f5ccb933f93b1caa103c8dd166"
+    }
   },
   {
     "patrimonio": "TI-0003",
     "nome": "Notebook 13 polegadas",
     "busca": "laptop closeup keyboard",
-    "buscaUsada": null,
-    "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "buscaUsada": "silver laptop on table",
+    "motivoTrocaBusca": "'closeup keyboard' sempre mostra teclas com letras legíveis (12 reprovadas)",
+    "tipoImagem": "photo",
+    "pixabayId": 6856557,
+    "pageURL": "https://pixabay.com/photos/laptop-technology-electronic-6856557/",
+    "autor": "LUNEMax",
+    "autorId": 24406265,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 886462,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 785742,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 6801339,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 338505,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 70506,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 3692440,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 3546296,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 1385706,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 2098301,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 1176260,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 883576,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 943739,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 6801334,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 6966045,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 6105750,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 1869820,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1846056,
+        "motivo": "texto"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0003.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "87d54cdaddddef9d5042446c9d144bdca2d9f0cc0c64d8c58aecb3a1c72cb8a7"
+    }
   },
   {
     "patrimonio": "TI-0004",
     "nome": "Notebook 15 polegadas",
     "busca": "closed laptop on table",
-    "buscaUsada": null,
-    "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "buscaUsada": "laptop closed",
+    "motivoTrocaBusca": "quatro termos de notebook fechado (até a página 3) trouxeram teclas legíveis, porta-retrato com pessoa ou objetos que não são notebook; a foto aprovada veio de 'laptop closed', mais fundo no acervo (29 reprovadas)",
+    "tipoImagem": "photo",
+    "pixabayId": 5517758,
+    "pageURL": "https://pixabay.com/photos/workplace-workspace-home-office-5517758/",
+    "autor": "ricardorv30",
+    "autorId": 2418232,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 1869820,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1846056,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 4208112,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 5517744,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 5132832,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 5517755,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 5517745,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 8308286,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 2608864,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 6105750,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 4977599,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2306471,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1869236,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 3088775,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 6889381,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 5517751,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 5517753,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 5517762,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 6679665,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2847957,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1337986,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 6371149,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 581128,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 4884604,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2209503,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 541068,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 4393382,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2202226,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 4869868,
+        "motivo": "nao-e-o-item"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0004.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "7cc655110f7cd5d81543ad54accb3ed7c18d02b9151e5603ce68dfa93209523b"
+    }
   },
   {
     "patrimonio": "TI-0005",
     "nome": "Monitor 24 polegadas",
     "busca": "computer monitor on desk",
-    "buscaUsada": null,
-    "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "buscaUsada": "monitor 3d render",
+    "motivoTrocaBusca": "nenhuma foto de monitor passou em quatro termos (30 reprovadas: quase todas iMac com logo da Apple, marca ou tela com conteúdo); aprovada uma renderização 3D sem marca",
+    "tipoImagem": "all",
+    "pixabayId": 5570515,
+    "pageURL": "https://pixabay.com/illustrations/living-room-interior-design-5570515/",
+    "autor": "tungnguyen0905",
+    "autorId": 17946924,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 4795762,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 1207834,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 1140699,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 6521720,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 8922413,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 8719563,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 1483974,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 1478822,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 6371149,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1337986,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 6966045,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 1846056,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 4962269,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 5519649,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2354948,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 3641937,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 1881,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2202321,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 5050543,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 226738,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 7439375,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2643261,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 9645835,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 224857,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2853844,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2853860,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2926960,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2825247,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 820277,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2853836,
+        "motivo": "marca"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0005.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "f3042e67f9f2bc12789d3f1f924f565ec0f91c55f78c56dde4305adafe805995"
+    }
   },
   {
     "patrimonio": "TI-0006",
     "nome": "Monitor 27 polegadas",
     "busca": "monitor screen office desk",
-    "buscaUsada": null,
-    "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "buscaUsada": "computer monitor",
+    "motivoTrocaBusca": "nenhuma foto de monitor passou em quatro termos (30 reprovadas: logo da Apple, Hisense, notebooks ou tela com conteúdo); aprovada uma ilustração sem marca",
+    "tipoImagem": "illustration",
+    "pixabayId": 32872,
+    "pageURL": "https://pixabay.com/vectors/lcd-monitor-computer-32872/",
+    "autor": "Clker-Free-Vector-Images",
+    "autorId": 3736,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 6521720,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 4795762,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 3114274,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 820277,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2853860,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 338561,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 415138,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 6531146,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 1106900,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2825247,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2857423,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2832017,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 1155173,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 4146579,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 5519649,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1209746,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 2354948,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 5446356,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1881,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 4875316,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 6500151,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 4965760,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 5050543,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 1140699,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2853844,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 3368794,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2128961,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2128962,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 7347561,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 1851483,
+        "motivo": "nao-e-o-item"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0006.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "d4731a86d2b11fd83b6c91aa6e5a6a646a180bef5bfe1a844cf1116b8073dbc4"
+    }
   },
   {
     "patrimonio": "TI-0007",
     "nome": "Monitor 22 polegadas",
     "busca": "black computer screen",
-    "buscaUsada": null,
-    "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "buscaUsada": "monitor 3d render",
+    "motivoTrocaBusca": "nenhuma foto de monitor passou em quatro termos (30 reprovadas: notebooks, TVs, Dell, LG, tela com conteúdo); aprovada uma renderização 3D sem marca",
+    "tipoImagem": "all",
+    "pixabayId": 7577870,
+    "pageURL": "https://pixabay.com/illustrations/monitor-3d-monitor-rendering-7577870/",
+    "autor": "Aakashdhage",
+    "autorId": 25986214,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 6801334,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1155173,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 4962269,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 5446357,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 5446361,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2853839,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 5446356,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1170255,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 5446359,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 572868,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 4042658,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 4645768,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 1116587,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 2559790,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 4308538,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 899265,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 3109537,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 3641937,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 5050543,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 849797,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 1853262,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 4795762,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 265130,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 6521720,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 6046539,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2599281,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 4165613,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 6525081,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 6531146,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 5519649,
+        "motivo": "nao-e-o-item"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0007.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "9be8cf6a6f6c6c89e37580a3a8e771b5b0ae08aa8f508a5f2490b519f9e3cd5f"
+    }
   },
   {
     "patrimonio": "TI-0008",
@@ -145,19 +818,42 @@
     "busca": "hdmi cable",
     "buscaUsada": null,
     "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "tipoImagem": "photo",
+    "pixabayId": 643728,
+    "pageURL": "https://pixabay.com/photos/hdmi-cable-connection-643728/",
+    "autor": "PIX1861",
+    "autorId": 468748,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 2202226,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 5407447,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 2358959,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 3645129,
+        "motivo": "texto"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0008.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "91aca23246fbdc68d86f5eda63147a1769dc5f4e648c540292fb40d11204555c"
+    }
   },
   {
     "patrimonio": "TI-0009",
@@ -165,19 +861,30 @@
     "busca": "usb cable white background",
     "buscaUsada": null,
     "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "tipoImagem": "photo",
+    "pixabayId": 7066188,
+    "pageURL": "https://pixabay.com/photos/cable-charging-cable-usb-7066188/",
+    "autor": "Alexandra_Koch",
+    "autorId": 621802,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 2467267,
+        "motivo": "nao-e-o-item"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0009.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "87eacf504b1bda2390b14b59d7234a9967713351394f989460ea36119dba325a"
+    }
   },
   {
     "patrimonio": "TI-0010",
@@ -185,58 +892,319 @@
     "busca": "ethernet cable",
     "buscaUsada": null,
     "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "tipoImagem": "photo",
+    "pixabayId": 494647,
+    "pageURL": "https://pixabay.com/photos/network-cable-cable-patch-494647/",
+    "autor": "blickpixel",
+    "autorId": 52945,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 499792,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 2784907,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 5033077,
+        "motivo": "pessoa"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0010.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "0fedc0b935804c1d3dc1c20c8ea6f4ea3b7fb404df3f993f6ed65c8cf0a7ded3"
+    }
   },
   {
     "patrimonio": "TI-0011",
     "nome": "Webcam Full HD",
     "busca": "webcam",
-    "buscaUsada": null,
-    "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "buscaUsada": "webcam",
+    "motivoTrocaBusca": "nenhuma foto de webcam passou em quatro termos (27 reprovadas: pessoas em videochamada, marca, texto de especificação na lente, ou outros objetos); aprovada uma ilustração 3D sem marca",
+    "tipoImagem": "illustration",
+    "pixabayId": 2094539,
+    "pageURL": "https://pixabay.com/illustrations/robot-cam-robot-camera-web-cam-2094539/",
+    "autor": "GraphicsSC",
+    "autorId": 1426978,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 1155173,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2937216,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 5560586,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 4480363,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 8670926,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 4607652,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 1163878,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 1131890,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 639192,
+        "motivo": "tela"
+      },
+      {
+        "pixabayId": 959578,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 3480569,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 6835351,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 2884460,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 219958,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 1248682,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 4875319,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1338414,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 7066127,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1078264,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 3199488,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 5981203,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 3715733,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 15738,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 10467229,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 7428278,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2004483,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1869760,
+        "motivo": "nao-e-o-item"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0011.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "577cac4cf99130f6091d4af65b61f225d1a893208f659bf6d5767a56f77bc2c3"
+    }
   },
   {
     "patrimonio": "TI-0012",
     "nome": "Câmera compacta",
     "busca": "compact camera on table",
-    "buscaUsada": null,
-    "motivoTrocaBusca": null,
-    "pixabayId": null,
-    "pageURL": null,
-    "autor": null,
-    "autorId": null,
+    "buscaUsada": "compact camera",
+    "motivoTrocaBusca": "nenhuma foto de câmera passou em quatro termos (30 reprovadas: Olympus, Fujifilm, Rollei, Pentax, Kodak, Leica, Sony, Nikon); aprovada uma ilustração sem marca",
+    "tipoImagem": "illustration",
+    "pixabayId": 813097,
+    "pageURL": "https://pixabay.com/illustrations/camera-retro-retro-look-813097/",
+    "autor": "Alexas_Fotos",
+    "autorId": 686414,
     "licenca": "Pixabay Content License",
     "licencaURL": "https://pixabay.com/service/license-summary/",
     "revisao": {
-      "status": "pendente",
-      "revisor": null,
-      "data": null
+      "status": "aprovada",
+      "revisor": "agente Claude (revisão delegada pelo usuário)",
+      "data": "2026-11-10"
     },
-    "rejeitadas": [],
-    "arquivo": null
+    "rejeitadas": [
+      {
+        "pixabayId": 541213,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 1362419,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 7693094,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 4516107,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 3545828,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 5028354,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 3480569,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 1077853,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2430571,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 6466096,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 6835351,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 5148602,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 9341083,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 466256,
+        "motivo": "texto"
+      },
+      {
+        "pixabayId": 2165761,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 3712272,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 4156340,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 790251,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1700110,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 820018,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 711794,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 1834784,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 1932466,
+        "motivo": "nao-e-o-item"
+      },
+      {
+        "pixabayId": 2608864,
+        "motivo": "pessoa"
+      },
+      {
+        "pixabayId": 431119,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 8457397,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 2757546,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 5309390,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 5282281,
+        "motivo": "marca"
+      },
+      {
+        "pixabayId": 3623574,
+        "motivo": "marca"
+      }
+    ],
+    "arquivo": {
+      "caminho": "TI-0012.jpg",
+      "largura": 800,
+      "altura": 600,
+      "sha256": "3c1a855c7fcb7f963e000cef29ffffd3187e23b6115236617420066e5181fe16"
+    }
   }
 ]

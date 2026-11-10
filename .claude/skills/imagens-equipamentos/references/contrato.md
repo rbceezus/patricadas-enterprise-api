@@ -6,7 +6,7 @@ depende de o agente seguir o SKILL.md. "Humano" = depende de uma pessoa.
 | requisito | garantido por | onde |
 |---|---|---|
 | Fonte: só Pixabay (decisão da turma; o enunciado pedia Pexels) | código | `lib.ts` só busca em `pixabay.com/api` e só baixa de `pixabay.com` / `cdn.pixabay.com` |
-| Direito de imagem: sem pessoa, marca, texto, tela com conteúdo | código (1º filtro) + humano (decisão) | `safesearch` e tags proibidas em `buscar.ts`; aprovação na revisão visual, com revisor registrado; `preparar.ts` recusa item sem aprovação |
+| Direito de imagem: sem pessoa, marca, texto, tela com conteúdo | código (1º filtro) + revisão (decisão) | `safesearch` e tags proibidas em `buscar.ts`; aprovação na revisão visual, com revisor registrado; `preparar.ts` recusa item sem aprovação. Na primeira execução a revisão foi delegada ao agente pelo usuário (ver `revisao.revisor` no manifesto) |
 | Mesmo tamanho 800×600 | código | `preparar.ts` recorta e relê o arquivo; `enviar.ts` e `conferir.ts` medem de novo |
 | Sem repetição | código | `exigirSemRepeticao`: mesmo id do Pixabay ou mesmo hash em dois itens falha |
 | Créditos (origem, autor, licença) | código | `prisma/data/imagens.json`, validado por schema Zod; `preparar.ts` preenche autor e página a partir da API |

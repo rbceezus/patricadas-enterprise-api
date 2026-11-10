@@ -47,6 +47,8 @@ const ItemManifesto = z.object({
   busca: z.string(),
   buscaUsada: z.string().nullable(),
   motivoTrocaBusca: z.string().nullable(),
+  /** "photo" por padrão. "illustration" só quando nenhuma foto passou na revisão (motivo em motivoTrocaBusca). */
+  tipoImagem: z.enum(["photo", "illustration", "all"]).default("photo"),
   pixabayId: z.number().int().nullable(),
   pageURL: z.string().nullable(),
   autor: z.string().nullable(),
@@ -91,6 +93,7 @@ export function lerManifesto(): ItemManifesto[] {
         busca: e.busca,
         buscaUsada: null,
         motivoTrocaBusca: null,
+        tipoImagem: "photo" as const,
         pixabayId: null,
         pageURL: null,
         autor: null,

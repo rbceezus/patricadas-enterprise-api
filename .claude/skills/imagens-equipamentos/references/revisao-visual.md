@@ -29,5 +29,21 @@ No manifesto `prisma/data/imagens.json`, no item do patrimônio:
   aprovar, preencha `buscaUsada` e `motivoTrocaBusca`. Isso vai para o
   ENTREGA.md.
 
+## Quando nenhuma foto passa
+
+Monitores, webcams e câmeras quase sempre aparecem no Pixabay com marca
+legível (Apple, Dell, Canon...). Depois de quatro termos sem foto aprovada,
+vale aceitar ilustração ou renderização 3D do próprio Pixabay: preencha
+`tipoImagem` (`"illustration"` ou `"all"`) e diga em `motivoTrocaBusca`
+quantas fotos foram reprovadas e por quê. Os mesmos cinco critérios valem.
+
+## Quem revisa
+
+O revisor fica registrado em `revisao.revisor`. A revisão pode ser
+delegada ao agente, mas só por decisão explícita da pessoa responsável
+pela entrega, e o revisor fica registrado como "agente ... (revisão
+delegada pelo usuário)". O código não distingue: a garantia continua sendo
+que nada sem revisor registrado é preparado.
+
 O número de fotos reprovadas e os motivos são lidos do manifesto para a
 seção 4 do ENTREGA.md.

@@ -11,6 +11,7 @@
       "Bash(npx ts-node .claude/skills/imagens-equipamentos/scripts/enviar.ts:*)",
       "Bash(npx tsx .claude/skills/imagens-equipamentos/scripts/enviar.ts:*)",
       "Bash(node .claude/skills/imagens-equipamentos/scripts/enviar:*)",
+      "Bash(npx ts-node prisma/criar-conta-professor.ts:*)",
       "Read(./.env)",
       "Read(./.env.local)",
       "Read(./.env.production*)",

@@ -48,7 +48,11 @@ async function main() {
   }
 
   await confirmarHumano(host);
-  const cab = { Authorization: `Bearer ${chave}`, apikey: chave };
+  // Chave nova (sb_secret_...) não é JWT: vai só no cabeçalho apikey.
+  // Chave antiga (service_role, JWT) vai nos dois.
+  const cab: Record<string, string> = chave.startsWith("sb_")
+    ? { apikey: chave }
+    : { Authorization: `Bearer ${chave}`, apikey: chave };
 
   // Bucket público, criado uma vez só.
   const bucket = await fetch(`${base}/storage/v1/bucket/${BUCKET}`, { headers: cab });

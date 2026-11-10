@@ -57,7 +57,7 @@ async function main() {
       const { hits } = await pixabay({
         q: termo,
         lang: "en",
-        image_type: "photo",
+        image_type: item.tipoImagem,
         orientation: "horizontal",
         min_width: String(LARGURA),
         min_height: String(ALTURA),

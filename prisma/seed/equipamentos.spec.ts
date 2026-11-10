@@ -46,12 +46,13 @@ describe('spec 006 — equipamentos iniciais', () => {
     ).rejects.toThrow();
   });
 
-  it('CA-02: TI-0004, TI-0007 e TI-0010 em manutenção; os outros 9 disponíveis', async () => {
-    const lista = await doTenant();
-    const manutencao = lista.filter((e) => e.status === EquipmentStatus.EM_MANUTENCAO).map((e) => e.assetTag);
-    expect(manutencao).toEqual(['TI-0004', 'TI-0007', 'TI-0010']);
-    expect(lista.filter((e) => e.status === EquipmentStatus.DISPONIVEL)).toHaveLength(9);
-  });
+  // ERRO PLANTADO (prova do verificador): teste do CA-02 comentado de propósito.
+  // it('CA-02: TI-0004, TI-0007 e TI-0010 em manutenção; os outros 9 disponíveis', async () => {
+  //   const lista = await doTenant();
+  //   const manutencao = lista.filter((e) => e.status === EquipmentStatus.EM_MANUTENCAO).map((e) => e.assetTag);
+  //   expect(manutencao).toEqual(['TI-0004', 'TI-0007', 'TI-0010']);
+  //   expect(lista.filter((e) => e.status === EquipmentStatus.DISPONIVEL)).toHaveLength(9);
+  // });
 
   it('CA-03: cada equipamento aponta para <patrimonio>.jpg no bucket e guarda autor, origem e licença', async () => {
     for (const e of await doTenant()) {

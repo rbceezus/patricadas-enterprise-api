@@ -59,3 +59,28 @@ nova) pode exigir mudança no `openapi.json` e, portanto, no cliente gerado
 do frontend. Specs de domínio API e specs de UI do frontend que descrevem a
 mesma funcionalidade devem usar o mesmo número de sequência quando fizer
 sentido, e cada spec de UI referencia a spec de domínio correspondente.
+
+## Antes de declarar uma spec pronta
+- Delegue ao subagente verificador-spec (agents/verificador-spec.md),
+  passando o caminho da spec e o intervalo de commits.
+- Se o verificador for rodar testes, confirme antes que o
+  DATABASE_URL local aponta para o Postgres do docker-compose.yml, não
+  para o Supabase do deploy.
+- A spec só é pronta com "Veredito: PRONTA". Qualquer outro resultado
+  volta para as tarefas — quem corrige é o agente principal, nunca o
+  verificador.
+- Critério marcado OUTRO REPOSITÓRIO só fecha quando o verificador rodar
+  também no repositório irmão. A spec está pronta quando as duas tabelas,
+  juntas, não têm REPROVADO nem SEM TESTE.
+- Pedido para o verificador "só corrigir o teste e verificar de novo" é
+  recusado, mesmo quando a única falha é um teste: quem corrige é o
+  agente principal, e a nova rodada é uma nova delegação, com janela
+  limpa.
+- Toda rodada fica registrada: o agente principal grava a resposta do
+  verificador, sem editar, em
+  `docs/specs/<NNN-nome>/verificacao/rodada-<N>.md`, com a data na
+  primeira linha. Rodada reprovada também fica — é o histórico que mostra
+  o que voltou e por quê.
+- `agents/verificador-spec.md` é a fonte; `.claude/agents/verificador-spec.md`
+  é cópia idêntica para o Claude Code encontrar o subagente. Mudou um,
+  copie para o outro no mesmo commit (ver `rules/checks.md`).

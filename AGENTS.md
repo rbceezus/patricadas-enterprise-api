@@ -34,6 +34,16 @@ Se algo não estiver em lugar nenhum, pergunte — não decida.
 - O frontend gera o cliente HTTP com Orval a partir desse OpenAPI. Mudança de
   contrato exige coordenação entre os dois repositórios.
 
+## Subagentes
+- Ficam em agents/<nome>.md. O frontmatter diz quando delegar; o
+  corpo é a instrução completa do subagente.
+- Subagente não herda esta conversa: ao delegar, passe tudo que o
+  arquivo dele pede como entrada.
+- Se o harness não tiver subagentes, abra uma sessão nova e comece
+  com: "Aja conforme agents/<nome>.md." e as entradas pedidas.
+- Hoje existe um: agents/verificador-spec.md. O mesmo arquivo vive no
+  repositório irmão (frontend, patricadas-enterprise-web), e cada um só verifica o próprio lado.
+
 ## Comandos
 - `npm run db:up` / `npm run db:down` — Postgres 16 local (docker-compose.yml).
 - `npm run start:dev` — API em http://localhost:3000 com reload.

@@ -11,17 +11,23 @@ alwaysApply: true
 Sempre que você for dizer "pronto", "implementado" ou "funcionando".
 
 ## Procedimento
-1. Rode `<COMANDO-TESTES>`. Cole a última linha da saída na resposta.
+1. Rode `npm test` (Jest + supertest; exige `npm run db:up` e o
+   `DATABASE_URL` do `.env` apontando para o Postgres local). Cole a
+   última linha da saída na resposta.
 2. Se a tarefa tocou em migration, rode `prisma migrate reset` contra o banco
    local (`DIRECT_URL`) e confirme que ele sobe do zero, aplicando todas as
    migrations sem passo manual.
-3. Rode `<COMANDO-BUILD>` antes de qualquer push. Build que quebra na Vercel é
-   o feedback mais lento e mais caro deste projeto.
+3. Rode `npm run build` e `npm run typecheck` antes de qualquer push.
+   Build que quebra na Vercel é o feedback mais lento e mais caro deste
+   projeto.
 4. Rode `git status --short`. Só podem aparecer arquivos do escopo da tarefa.
 5. Diga qual critério de aceitação (CA-xx) esta tarefa atende.
+6. Se a tarefa mexeu no verificador, confirme que a cópia do harness é
+   idêntica à fonte:
+   `git diff --no-index --exit-code agents/verificador-spec.md .claude/agents/verificador-spec.md`
 
 ## Verificação
-Pronto = os quatro comandos terminaram sem falha E o `git status` não trouxe
+Pronto = os comandos acima terminaram sem falha E o `git status` não trouxe
 surpresa. As duas coisas, não uma.
 
 ## Não faça
@@ -33,8 +39,6 @@ surpresa. As duas coisas, não uma.
   papel do CI (ver rules/restrictions.md).
 
 ## Estado atual do projeto
-`<COMANDO-TESTES>` e `<COMANDO-BUILD>` ainda não existem: não há código,
-suíte de testes nem script de build (andar zero pendente — ver
-docs/aulas/aula8-greenfield-ordem.html). Esta seção passa a valer assim que
-esses comandos existirem de fato; até lá, os passos 1 e 3 não são
-executáveis.
+Os comandos dos passos 1 e 3 existem (`package.json`). Ainda não existe
+`prisma/migrations/` (AZ-03 pendente), então o passo 2 só passa a valer
+depois da primeira migration.

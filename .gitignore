@@ -21,3 +21,6 @@ yarn-error.log*
 Thumbs.db
 .idea/
 .vscode/
+
+# Skill imagens-equipamentos: candidatos, imagens prontas e cache do Pixabay
+tmp/

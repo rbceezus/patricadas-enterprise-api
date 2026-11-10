@@ -8,9 +8,13 @@
       "Bash(npx supabase:*)",
       "Bash(npx prisma migrate deploy:*)",
       "Bash(npx prisma db push:*)",
+      "Bash(npx ts-node .claude/skills/imagens-equipamentos/scripts/enviar.ts:*)",
+      "Bash(npx tsx .claude/skills/imagens-equipamentos/scripts/enviar.ts:*)",
+      "Bash(node .claude/skills/imagens-equipamentos/scripts/enviar:*)",
       "Read(./.env)",
       "Read(./.env.local)",
-      "Read(./.env.production*)"
+      "Read(./.env.production*)",
+      "Read(./.env.*.local)"
     ]
   }
 }

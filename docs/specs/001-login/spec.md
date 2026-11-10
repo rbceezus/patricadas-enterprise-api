@@ -27,10 +27,28 @@ enxerga os próprios empréstimos depois de autenticada.
 - Recuperação de senha.
 - Login social / SSO.
 
-## Perguntas em aberto
+## Critérios de aceite (API)
 
-- Qual provedor faz a autenticação (Supabase Auth é a suposição, a confirmar
-  no ADR correspondente)? Esta spec não decide — só descreve o
-  comportamento esperado.
-- Como o papel (Colaborador/Operações) é atribuído a uma conta? Quem
-  cadastra Operações?
+Acrescentados na prática de subagentes (2026-11-10), para o professor
+conseguir entrar em produção (spec 006).
+
+- **CA-01** `GET /v1/me` sem token responde 401.
+- **CA-02** Token com assinatura inválida, de outro emissor ou expirado
+  responde 401. A assinatura é conferida contra o JWKS do Supabase.
+- **CA-03** Token válido de uma pessoa com vínculo no tenant responde 200
+  com `id`, `email`, `name` e `role` (`COLABORADOR` ou `OPERACOES`). O papel
+  vem do vínculo, não do token nem do corpo.
+- **CA-04** Token válido de uma pessoa sem vínculo no tenant responde 403.
+
+## Perguntas respondidas
+
+- Provedor: Supabase Auth, e-mail e senha (ADR-001 §Autenticação).
+- Papel: vem de `memberships`. A conta do professor é criada como
+  Colaborador pelo script da spec 006; cadastro de Operações continua fora
+  do escopo.
+- Tenant: o token do Supabase não traz claim de tenant. Enquanto houver um
+  tenant só (`suporte_ti`), a API resolve o tenant pelo vínculo da pessoa.
+  Diverge do ADR-001 ("tenant vem de claim do JWT"); registrado no
+  ENTREGA.md. Volta a ser decisão quando existir o segundo tenant.
+- Validação do token: `crypto` nativo do Node (ES256 com a chave do JWKS),
+  sem biblioteca nova.

@@ -12,7 +12,16 @@ const envSchema = z.object({
     .url()
     .default('http://localhost:5173')
     .transform((origin) => origin.replace(/\/+$/, '')),
-});
+  // Login (spec 001): emissor dos tokens e chaves públicas para conferir a assinatura.
+  SUPABASE_URL: z
+    .string()
+    .url('SUPABASE_URL não definida — necessária para validar o login')
+    .transform((url) => url.replace(/\/+$/, '')),
+  SUPABASE_JWKS_URL: z.string().url().optional(),
+}).transform((env) => ({
+  ...env,
+  SUPABASE_JWKS_URL: env.SUPABASE_JWKS_URL ?? `${env.SUPABASE_URL}/auth/v1/.well-known/jwks.json`,
+}));
 
 export type Env = z.infer<typeof envSchema>;
 

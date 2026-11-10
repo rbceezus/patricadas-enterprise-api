@@ -1,32 +1,35 @@
 // Seed idempotente (rules/migration.md, ADR-001 §Dados e persistência).
 //
-// Cria apenas o tenant inicial `suporte_ti`. Usuário e Membership NÃO
-// entram aqui: o id de User é o mesmo UUID do usuário no Supabase Auth
-// (ver prisma/schema.prisma, model User), e este seed não tem — e não deve
-// inventar — uma credencial ou id de conta real (rules/secrets.md). Depois
-// que a primeira conta de Operações existir no Supabase Auth, o vínculo
-// Membership(userId, tenantId: suporte_ti, role: OPERACOES) é criado por um
-// passo manual ou por uma rotina de convite, não por este seed.
-import { PrismaClient } from "@prisma/client";
+// Cria o tenant `suporte_ti` e os 12 equipamentos da spec 006. Usuário e
+// Membership NÃO entram aqui: o id de User é o mesmo UUID do Supabase Auth, e
+// a conta do professor é criada por prisma/criar-conta-professor.ts, que lê a
+// senha do ambiente (spec 006 CA-04, CA-05).
+//
+// IMAGENS_BASE_URL: URL pública do bucket `equipamentos`, por exemplo
+// https://<projeto>.supabase.co/storage/v1/object/public/equipamentos
+import { PrismaClient } from '@prisma/client';
+import { semearEquipamentos } from './seed/equipamentos';
 
 const prisma = new PrismaClient();
 
 async function main() {
-  const tenant = await prisma.tenant.upsert({
-    where: { slug: "suporte_ti" },
-    update: {},
-    create: {
-      slug: "suporte_ti",
-      name: "Suporte de TI",
-    },
-  });
+  const baseImagens = process.env.IMAGENS_BASE_URL;
+  if (!baseImagens) throw new Error('Defina IMAGENS_BASE_URL (URL pública do bucket equipamentos).');
 
+  const tenant = await prisma.tenant.upsert({
+    where: { slug: 'suporte_ti' },
+    update: {},
+    create: { slug: 'suporte_ti', name: 'Suporte de TI' },
+  });
   console.log(`Tenant pronto: ${tenant.slug} (${tenant.id})`);
+
+  const total = await semearEquipamentos(prisma, tenant.id, baseImagens);
+  console.log(`Equipamentos prontos: ${total}`);
 }
 
 main()
   .catch((error) => {
-    console.error(error);
+    console.error(error instanceof Error ? error.message : error);
     process.exitCode = 1;
   })
   .finally(async () => {
